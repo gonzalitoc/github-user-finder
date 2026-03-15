@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# 🔎 GitHub User Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para buscar usuarios de GitHub utilizando la API pública de GitHub y mostrar información básica de su perfil.
 
-Currently, two official plugins are available:
+## 📸 Vista previa
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Vista previa de la app](./screenshots/preview.png)](https://gonzalitoc.github.io/github-user-finder)
 
-## React Compiler
+## 🚀 Demo en vivo
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Puedes probar la aplicación aquí:
 
-## Expanding the ESLint configuration
+https://gonzalitoc.github.io/github-user-finder
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📖 Descripción
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+GitHub User Finder es una aplicación que permite buscar usuarios de GitHub ingresando su nombre de usuario.
+La aplicación consume la API pública de GitHub y muestra información relevante del perfil.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Información mostrada:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Avatar del usuario
+- Nombre de usuario
+- Biografía
+- Número de seguidores
+- Número de repositorios públicos
+- Enlace directo al perfil de GitHub
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Este proyecto fue desarrollado como práctica para aprender consumo de APIs, manejo de estados y despliegue de aplicaciones frontend.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologías utilizadas
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React
+- TypeScript
+- Vite
+- GitHub API
+- CSS
+
+## ✨ Características
+
+- Búsqueda de usuarios de GitHub
+- Consumo de API externa
+- Estado de carga (loading)
+- Manejo de errores
+- Interfaz simple y clara
+- Tarjeta de usuario estilo GitHub
+
+## ⚙️ Instalación
+
+Clonar el repositorio:
+
+git clone https://github.com/gonzalitoc/github-user-finder
+
+Entrar a la carpeta del proyecto:
+
+cd github-user-finder
+
+Instalar dependencias:
+
+npm install
+
+Ejecutar el servidor de desarrollo:
+
+npm run dev
+
+## 📦 Build para producción
+
+npm run build
+
+##
+
+Proyecto creado como parte de aprendizaje en desarrollo frontend utilizando React y TypeScript.
